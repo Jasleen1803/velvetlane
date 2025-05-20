@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VELVET LANE</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    footer {
+      font-size: 0.9rem;
+      padding: 2rem 0;
+      background-color: #f8f9fa;
+    }
+
+    footer h5 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    footer p a {
+      color: inherit;
+      transition: color 0.3s ease;
+    }
+
+    footer p a:hover {
+      color: #ffc107;
+      text-decoration: underline;
+    }
+
+    footer .btn-warning {
+      color: #000 !important;
+    }
+
+    /* 🎯 New CSS for Help and About Us links */
+    .footer-link {
+      color: #212529;
+      /* Bootstrap's default text-dark color */
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-link:hover {
+      color: red !important;
+      text-decoration: none;
+    }
+  </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <!-- Logo -->
+          <a class="navbar-brand fw-bold" href="#">VelvetLane</a>
+    
+          <!-- Toggle button -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <!-- Full navbar -->
+          <div class="collapse navbar-collapse" id="mainNavbar">
+    
+            <!-- Navbar Center Menu -->
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0" id="mainNavLinks">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Home
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                  <li><a class="dropdown-item" href="#">Home 1</a></li>
+                  <li><a class="dropdown-item" href="#">Home 2</a></li>
+                </ul>
+              </li>
+    
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Shop
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="shopDropdown">
+                  <li><a class="dropdown-item" href="/PRODUCTLIST">All Products</a></li>
+                  <li><a class="dropdown-item" href="#">Categories</a></li>
+                </ul>
+              </li>
+    
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Products
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                  <li><a class="dropdown-item" href="/PRODUCTLIST" target="_blank">All Products</a></li>
+    
+                  <li><a class="dropdown-item" href="#">Single Product</a></li>
+                </ul>
+              </li>
+    
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Pages
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                  <li><a class="dropdown-item" href="#">About Us</a></li>
+                  <li><a class="dropdown-item" href="#">Contact</a></li>
+                </ul>
+              </li>
+    
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Blog
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+                  <li><a class="dropdown-item" href="#">Blog List</a></li>
+                  <li><a class="dropdown-item" href="#">Blog Single</a></li>
+                </ul>
+              </li>
+    
+              <li class="nav-item">
+                <a class="nav-link" href="#">Buy now</a>
+              </li>
+            </ul>
+    
+            <!-- Right Side Icons -->
+            <div class="d-flex align-items-center gap-3">
+              <a href="#" class="text-dark fw-bold"><i class="bi bi-search fs-5"></i></a>
+              <a href="#" class="text-dark fw-bold"><i class="bi bi-person fs-5"></i></a>
+              <a href="#" class="text-dark fw-bold"><i class="bi bi-heart fs-5"></i></a>
+              <a href="/cart" class="text-dark fw-bold"><i class="bi bi-bag fs-5"></i></a>
+            </div>
+    
+          </div>
+        </div>
+      </nav>
+<!--MAIN TERMS AND CONDITION SECTION-->
+<!-- Terms & Conditions Section -->
+<section class="py-5 px-3 px-md-5" style="background-color: #f9f9f9;">
+    <div class="container">
+      <h1 class="text-center mb-5 fw-bold">Terms & Conditions</h1>
+  
+      <div class="mb-4">
+        <h5 class="fw-semibold">These Terms and Conditions May Change</h5>
+        <p>We reserve the right to update or modify these terms and conditions at any time without prior notice. Your use of shop.company.com and shop.beetle.com.sg following any such change constitutes your agreement to follow and be bound by the terms and conditions as changed. For this reason, we encourage you to review these terms and conditions whenever you use this website.</p>
+      </div>
+  
+      <div class="mb-4">
+        <h5 class="fw-semibold">Limitations of Liability</h5>
+        <p>The Company Pte Ltd shall not assume any responsibility, and shall not be liable for, any damages to, or viruses that may infect, your computer, telecommunication equipment, or other property caused by or arising from your access to, use of, or browsing this website or your downloading of any materials from this website...</p>
+      </div>
+  
+      <div class="mb-4">
+        <h5 class="fw-semibold">Copyright and Trademark</h5>
+        <p>Unless otherwise indicated, material on this website, including but not limited to texts, images, illustrations, software, audio clips, video clips, animation files, is subject to the copyright and trademark rights of The Company Private Limited. Consequently, the material on this website may not be copied, reproduced, modified, posted, transmitted, distributed, or in whole or in part in any form whatsoever, without the prior written consent of The Company Private Limited. All rights reserved.</p>
+      </div>
+  
+      <div class="mb-4">
+        <h5 class="fw-semibold">Products, Content and Specifications</h5>
+        <p>All features, content, specifications, products and prices of products and services described or depicted on this website are subject to change at any time without notice...</p>
+      </div>
+  
+      <div class="mb-4">
+        <h5 class="fw-semibold">Shipping Limitations</h5>
+        <p>When an order is placed, it will be shipped to an address designated by the purchaser as long as that shipping address is compliant with the shipping restrictions contained on this website...</p>
+      </div>
+  
+      <div class="mb-4">
+        <h5 class="fw-semibold">Duties and Taxes</h5>
+        <p>You are responsible for duties and taxes outside Singapore. All items entering a foreign country are subject to customs inspection and assessment of the duties and taxes in accordance with that country's national laws.</p>
+      </div>
+  
+      <div class="mb-4">
+        <h5 class="fw-semibold">Your Account</h5>
+        <p>You are responsible for maintaining the confidentiality of your account and password information...</p>
+      </div>
+  
+      <div class="mb-4">
+        <h5 class="fw-semibold">Exchange and Refund Policy (Singapore Outlets Only)</h5>
+        <p>New, unused full-price merchandise purchased at store retail store may be exchange at any boutique with an original receipt within 7 days of purchase...</p>
+      </div>
+  
+      <div class="mb-4">
+        <h5 class="fw-semibold">Exchange and Refund Policy (Online Shop)</h5>
+        <p>We offer a no-refund policy on all merchandise, however, for merchandise qualifying for an exchange, item may be exchanged for store credits which may be used at our Singapore outlets only...</p>
+      </div>
+  
+      <div class="mb-4">
+        <h5 class="fw-semibold">Electronic Communications</h5>
+        <p>When you visit this website and/or send email to us, you consent to receive electronic communications from us...</p>
+      </div>
+  
+      <div class="mb-4">
+        <h5 class="fw-semibold">Exclusions of Warranties</h5>
+        <p>The Company Private Limited makes no representation or warranty regarding the good working order or condition of this website...</p>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+      <!--FOOTER  SECTION-->
+  <!-- Bootstrap 5 Footer -->
+  <footer class="bg-white pt-5 border-top">
+    <div class="container">
+      <div class="row gy-5 justify-content-between">
+  
+        <!-- Logo + Address -->
+        <div class="col-lg-3">
+          <h4 class="fw-bold">VelvetLane</h4>
+          <p class="mb-1">Address: 1234 Fashion Street, Suite 567,</p>
+          <p class="mb-1">New York, NY 10001</p>
+          <p class="mb-1">Email: <a href="mailto:info@fashionshop.com" class="fw-semibold text-dark">info@fashionshop.com</a></p>
+          <p class="mb-3">Phone: <a href="tel:2125551234" class="fw-semibold text-dark">(212) 555–1234</a></p>
+          <a href="#" class="text-dark text-decoration-underline">Get direction <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+  
+          <!-- Social Icons -->
+          <div class="d-flex gap-3 mt-4">
+            <a href="#" class="btn btn-outline-dark rounded-circle"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="btn btn-outline-dark rounded-circle"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="btn btn-outline-dark rounded-circle"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="btn btn-outline-dark rounded-circle"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="btn btn-outline-dark rounded-circle"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+        </div>
+  
+        <!-- Help -->
+        <div class="col-6 col-lg-2">
+          <h6 class="fw-bold mb-3">Help</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="footer-link text-dark d-block mb-2">Privacy Policy</a></li>
+            <li><a href="#" class="footer-link text-dark d-block mb-2">Returns + Exchanges</a></li>
+            <li><a href="#" class="footer-link text-dark d-block mb-2">Shipping</a></li>
+            <li><a href="#" class="footer-link text-dark d-block mb-2">Terms & Conditions</a></li>
+            <li><a href="#" class="footer-link text-dark d-block mb-2">FAQ’s</a></li>
+            <li><a href="#" class="footer-link text-dark d-block mb-2">Compare</a></li>
+            <li><a href="#" class="footer-link text-dark d-block">My Wishlist</a></li>
+          </ul>
+        </div>
+  
+        <!-- About Us -->
+        <div class="col-6 col-lg-2">
+          <h6 class="fw-bold mb-3">About us</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="footer-link text-dark d-block mb-2">Our Story</a></li>
+            <li><a href="#" class="footer-link text-dark d-block mb-2">Visit Our Store</a></li>
+            <li><a href="#" class="footer-link text-dark d-block mb-2">Contact Us</a></li>
+            <li><a href="#" class="footer-link text-dark d-block">Account</a></li>
+          </ul>
+        </div>
+  
+        <!-- Sign Up for Email -->
+        <div class="col-lg-4">
+          <h6 class="fw-bold mb-3">Sign Up for Email</h6>
+          <p class="mb-3">Sign up to get first dibs on new arrivals, sales, exclusive content, events and more!</p>
+          <form class="d-flex mb-3">
+            <input type="email" class="form-control rounded-0 rounded-start" placeholder="Enter your email....">
+            <button type="submit" class="btn btn-dark rounded-0 rounded-end">Subscribe <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+          </form>
+  
+          <!-- Language & Currency -->
+          <div class="d-flex justify-content-start align-items-center gap-4">
+            <div><i class="flag-icon flag-icon-us me-1"></i> USD <i class="fa-solid fa-chevron-down ms-1"></i></div>
+            <div>English <i class="fa-solid fa-chevron-down ms-1"></i></div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Bottom Row -->
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center border-top pt-4 mt-5">
+        <p class="mb-2 mb-md-0 text-muted">© 2025 Ecomus Store. All Rights Reserved</p>
+        <div class="d-flex gap-3">
+          <img src="https://img.icons8.com/color/40/visa.png" alt="Visa"/>
+          <img src="https://img.icons8.com/color/40/paypal.png" alt="Paypal"/>
+          <img src="https://img.icons8.com/color/40/mastercard.png" alt="MasterCard"/>
+          <img src="https://img.icons8.com/color/40/amex.png" alt="Amex"/>
+          <img src="https://img.icons8.com/color/40/discover.png" alt="Discover"/>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
