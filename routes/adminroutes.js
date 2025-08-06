@@ -1,15 +1,14 @@
 const express = require('express');
+const mysql = require('mysql2');
 const router = express.Router();
 
-// Dummy data (Replace with real DB logic later)
-let products = [
-  { id: 1, name: 'T-Shirt', price: 499, image: 'tshirt.jpg', description: 'Comfortable cotton tee' },
-  { id: 2, name: 'Jeans', price: 999, image: 'jeans.jpg', description: 'Denim jeans' }
-];
-
-let orders = [
-  { id: 101, username: 'Jassu', total: 1498, status: 'Pending' }
-];
+// MySQL connection
+const db = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'jas_2011', // add your MySQL password if set
+  database: 'velvetlane'
+});
 
 // Admin Dashboard
 router.get('/', (req, res) => {
@@ -18,36 +17,61 @@ router.get('/', (req, res) => {
 
 // Products Page
 router.get('/products', (req, res) => {
-  res.render('adminProducts', { products });
+  db.query('SELECT * FROM products', (err, results) => {
+    if (err) {
+      console.error('Error fetching products:', err);
+      return res.status(500).send('Server error');
+    }
+    res.render('adminProducts', { products: results });
+  });
 });
 
 // Add Product
 router.post('/products/add', (req, res) => {
   const { name, price, image, description } = req.body;
-  const newProduct = {
-    id: Date.now(), name, price, image, description
-  };
-  products.push(newProduct);
-  res.redirect('/admin/products');
+  const query = 'INSERT INTO products (name, price, image, description) VALUES (?, ?, ?, ?)';
+  db.query(query, [name, price, image, description], (err) => {
+    if (err) {
+      console.error('Error adding product:', err);
+      return res.status(500).send('Server error');
+    }
+    res.redirect('/admin/products');
+  });
 });
 
 // Delete Product
 router.post('/products/delete/:id', (req, res) => {
-  const id = parseInt(req.params.id);
-  products = products.filter(p => p.id !== id);
-  res.redirect('/admin/products');
+  const id = req.params.id;
+  db.query('DELETE FROM products WHERE id = ?', [id], (err) => {
+    if (err) {
+      console.error('Error deleting product:', err);
+      return res.status(500).send('Server error');
+    }
+    res.redirect('/admin/products');
+  });
 });
 
 // Orders Page
 router.get('/orders', (req, res) => {
-  res.render('adminOrders', { orders });
+  db.query('SELECT * FROM orders', (err, results) => {
+    if (err) {
+      console.error('Error fetching orders:', err);
+      return res.status(500).send('Server error');
+    }
+    res.render('adminOrders', { orders: results });
+  });
 });
 
 // Mark Order Done
 router.post('/orders/mark-done/:id', (req, res) => {
-  const id = parseInt(req.params.id);
-  orders = orders.map(order => order.id === id ? { ...order, status: 'Completed' } : order);
-  res.redirect('/admin/orders');
+  const id = req.params.id;
+  db.query('UPDATE orders SET status = "Completed" WHERE id = ?', [id], (err) => {
+    if (err) {
+      console.error('Error updating order status:', err);
+      return res.status(500).send('Server error');
+    }
+    res.redirect('/admin/orders');
+  });
 });
 
 module.exports = router;

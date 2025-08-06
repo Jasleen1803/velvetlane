@@ -46,3 +46,8 @@ const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`🚀 Server running at: http://localhost:${PORT}`);
 });
+
+// for vercel deployment
+module.exports = app;
+// DO NOT call app.listen(...) here
+

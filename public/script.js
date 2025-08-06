@@ -1,30 +1,4 @@
-/*
-//product 1 page quantity
-
-  function changeQuantity(change) {
-  const qtyElement = document.getElementById('qty');
-  let currentQty = parseInt(qtyElement.textContent);
-
-  // Update quantity but don’t allow less than 1
-  currentQty += change;
-  if (currentQty < 1) currentQty = 1;
-
-  qtyElement.textContent = currentQty;
-}
-//product 1 page image change
-function changeImage(thumbnail) {
-      const mainImage = document.getElementById("mainProductImage");
-      mainImage.classList.add("fade-out");
-      setTimeout(() => {
-        mainImage.src = thumbnail.src;
-        mainImage.classList.remove("fade-out");
-      }, 400);
-    }*/
-   
-   
-   
-   
-      //productdetails page
+  //productdetails page
      document.querySelectorAll(".thumb-img").forEach(thumb => {
       thumb.addEventListener("click", function () {
         document.getElementById("mainProductImg").src = this.src;
@@ -276,3 +250,43 @@ document.addEventListener("DOMContentLoaded", updateCartDisplay);
     if (closeModalBtn) closeModalBtn.addEventListener("click", closePopup);
     if (notInterestedBtn) notInterestedBtn.addEventListener("click", closePopup);
   });
+
+  //basic chart data for admin dashbboard
+  // Sales Line Chart
+const ctx1 = document.getElementById('salesChart').getContext('2d');
+new Chart(ctx1, {
+  type: 'line',
+  data: {
+    labels: ['4 Jan', '5 Jan', '6 Jan', '7 Jan', '8 Jan', '9 Jan', '10 Jan'],
+    datasets: [{
+      label: 'Sales',
+      data: [120, 190, 140, 200, 150, 180, 170],
+      fill: true,
+      borderColor: '#007bff',
+      backgroundColor: 'rgba(0,123,255,0.1)',
+      tension: 0.4
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { display: false } }
+  }
+});
+
+// Orders Doughnut Chart
+const ctx2 = document.getElementById('ordersChart').getContext('2d');
+new Chart(ctx2, {
+  type: 'doughnut',
+  data: {
+    labels: ['Completed', 'Pending', 'Unpaid', 'Canceled'],
+    datasets: [{
+      data: [50, 25, 15, 10],
+      backgroundColor: ['#007bff', '#ffc107', '#dc3545', '#6c757d'],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { position: 'bottom' } }
+  }
+});

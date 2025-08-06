@@ -1,14 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Admin Dashboard</title>
-  <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8" />
+  <title>Velvetlane Admin Dashboard</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <h1>Welcome to Admin Dashboard</h1>
-  <ul>
-    <li><a href="/admin/products">Manage Products</a></li>
-    <li><a href="/admin/orders">Manage Orders</a></li>
-  </ul>
+  <div class="admin-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">Velvetlane</h2>
+      <nav>
+        <a href="/admin/dashboard" class="active">📊 Dashboard</a>
+        <a href="/admin/products">📦 Products</a>
+        <a href="/admin/orders">🧾 Orders</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-dashboard">
+      <header class="dashboard-header">
+        <h1>Dashboard</h1>
+        <div class="profile">
+          <span>👩 Admin</span>
+        </div>
+      </header>
+
+      <!-- Summary Cards -->
+      <section class="cards">
+        <div class="card">
+          <h3>1,503</h3>
+          <p>Daily Signups</p>
+        </div>
+        <div class="card">
+          <h3>79,503</h3>
+          <p>Daily Visitors</p>
+        </div>
+        <div class="card">
+          <h3>15,503</h3>
+          <p>Daily Orders</p>
+        </div>
+        <div class="card">
+          <h3>$98,503</h3>
+          <p>Daily Revenue</p>
+        </div>
+      </section>
+
+      <!-- Charts -->
+      <section class="charts">
+        <div class="chart-box">
+          <h3>Sales Report</h3>
+          <canvas id="salesChart"></canvas>
+        </div>
+        <div class="chart-box">
+          <h3>Orders Overview</h3>
+          <canvas id="ordersChart"></canvas>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/script.js"></script>
 </body>
 </html>
